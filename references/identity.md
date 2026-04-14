@@ -1,96 +1,96 @@
-# Identite Visuelle ENZI
+# Identit? visuelle ENZI
 
-## Impression Centrale
+## Impression centrale
 
-ENZI doit evoquer un noyau de commande, pas une mascotte.
+ENZI doit ?voquer un noyau de commande, pas une mascotte.
 
 Cible visuelle :
-- autorite
-- pression sous controle
-- precision architecturale
-- force guidee
-- focalisation a fort contraste
+- autorit?
+- pression sous contr?le
+- pr?cision architecturale
+- force guid?e
+- focalisation ? fort contraste
 
-## Metaphore Visuelle
+## M?taphore visuelle
 
-ENZI est le noyau rouge d'un tableau de bord systeme :
-- l'endroit ou le noeud critique est expose
-- l'endroit ou le bruit est retire
-- l'endroit ou la structure devient visible
+ENZI est le noyau rouge d'un tableau de bord syst?me :
+- l'endroit o? le n?ud critique est expos?
+- l'endroit o? le bruit est retir?
+- l'endroit o? la structure devient visible
 
-Il doit se situer a mi-chemin entre :
-- un coeur de reacteur
-- une console systeme
-- une piece mecanique de precision
+Il doit se situer ? mi-chemin entre :
+- un c?ur de r?acteur
+- une console syst?me
+- une pi?ce m?canique de pr?cision
 - un hub d'orchestration IA
 
 ## Palette
 
-| Role | Couleur | Sens |
+| R?le | Couleur | Sens |
 | --- | --- | --- |
-| Rouge noyau | `#9B111E` | autorite, pression, identite |
-| Rouge actif | `#E63946` | energie, focus, mouvement |
-| Rouge sombre | `#5C0B12` | profondeur, controle, gravite |
-| Blanc doux | `#FFF3F3` | contraste, clarte, structure lisible |
+| Rouge noyau | `#9B111E` | autorit?, pression, identit? |
+| Rouge actif | `#E63946` | ?nergie, focus, mouvement |
+| Rouge sombre | `#5C0B12` | profondeur, contr?le, gravit? |
+| Blanc doux | `#FFF3F3` | contraste, clart?, structure lisible |
 | Encre carbone | `#1A1A1A` | support neutre optionnel |
 
-## Langage Des Formes
+## Langage des formes
 
-Preferer :
-- une geometrie nette
-- une symetrie centrale ou quasi symetrie
+Pr?f?rer :
+- une g?om?trie nette
+- une sym?trie centrale ou quasi-sym?trie
 - des formes directionnelles
 - une profondeur en couches
 - un point focal clair
 
-Eviter :
+?viter :
 - les mascottes rondes et mignonnes
-- le decoratif encombrant
+- le d?coratif encombrant
 - le style pastel doux
-- trop de petits details
+- trop de petits d?tails
 
-## Logique Du Symbole
+## Logique du symbole
 
-L'icone ENZI doit suggerer :
-- un centre de controle
+L'ic?ne ENZI doit sugg?rer :
+- un centre de contr?le
 - une pointe directionnelle ou un vecteur
-- un noeud structurel
+- un n?ud structurel
 - un noyau sous compression
 
 Bons motifs :
-- anneau de reacteur
+- anneau de r?acteur
 - pointe angulaire
 - diamant central
 - axe de guidage
-- plaques rouges superposees
+- plaques rouges superpos?es
 
-## Ton Typographique
+## Ton typographique
 
-Si une typographie est ajoutee, elle doit sembler :
-- condensee ou ingenieriee
+Si une typographie est ajout?e, elle doit sembler :
+- condens?e ou ing?nier?e
 - propre et nette
 - pas ludique
-- pas ornamentale
+- pas ornementale
 
-## Comportement En Interface
+## Comportement en interface
 
 En interface, ENZI doit se lire comme :
-- a haute importance
+- ? haute importance
 - analytique
 - intense mais propre
-- concu pour guider dans la complexite
+- con?u pour guider dans la complexit?
 
-## Lecture Actuelle De L'Icone
+## Lecture actuelle de l'ic?ne
 
-La version 1 evoque :
+La version 1 ?voque :
 - un noyau de commande rouge
-- un eclat directionnel central
-- une energie architecturale compacte
+- un ?clat directionnel central
+- une ?nergie architecturale compacte
 
-## Direction De La Version 2
+## Direction de la version 2
 
 La version 2 doit aller plus loin vers :
-- un architecte systeme premium
-- une esthetique de salle de controle IA
+- un architecte syst?me premium
+- une esth?tique de salle de contr?le IA
 - une sensation plus forte de structure en couches
-- un axe central de guidage plus evident
+- un axe central de guidage plus ?vident

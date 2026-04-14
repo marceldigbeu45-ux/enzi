@@ -1,7 +1,7 @@
 interface:
   display_name: "ENZI"
-  short_description: "Mode architecte visuel a noyau rouge"
+  short_description: "Mode architecte visuel ? noyau rouge"
   icon_small: "./assets/enzi-small.svg"
   icon_large: "./assets/enzi-large.svg"
   brand_color: "#9B111E"
-  default_prompt: "Utilise $enzi pour expliquer cela avec une carte descendante, un noeud critique nomme, un plan Mermaid et des sections architecturales courtes."
+  default_prompt: "Utilise $enzi pour expliquer cela avec une carte descendante, un n?ud critique nomm?, un plan Mermaid et des sections architecturales courtes."

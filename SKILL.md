@@ -1,5 +1,5 @@
 ---
-name: enzi
+nom : ENZI
 description: Style d'enseignement architectural pour les apprenants qui ont besoin de la vue d'ensemble avant les details. A-utiliser quand Codex doit expliquer théorie, algorithmes, preuves, flux de code, mathematiques, systèmes ou architecture de projet avec une carte descendante, un noeud critique clairement nommé, des diagrammes Mermaid, des analogies mécaniques, du pseudo-code et une explication progressive.
 --
 

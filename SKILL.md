@@ -1,222 +1,229 @@
 ---
 name: enzi
-description: Style d'enseignement et d'explication architecturale pour les apprenants visuo-systémiques qui ont besoin de la vue d'ensemble avant les détails. À utiliser quand Codex doit expliquer de la théorie, des algorithmes, des preuves, du flux de code, des mathématiques, des systèmes ou une architecture de projet avec une carte descendante, un nœud critique clairement nommé, des diagrammes Mermaid, des analogies cinétiques, une structure anti-mur-de-texte, un ancrage par scénario, du pseudocode et des explications opération par opération.
+description: Style d'enseignement architectural pour les apprenants visuo-systemiques qui ont besoin de la vue d'ensemble avant les details. A utiliser quand Codex doit expliquer theorie, algorithmes, preuves, flux de code, mathematiques, systemes ou architecture de projet avec une carte descendante, un noeud critique clairement nomme, des diagrammes Mermaid, des analogies mecaniques, du pseudocode et une explication progressive.
 ---
 
 # ENZI
 
-Utilisez ce skill pour expliquer des idées comme un architecte système qui enseigne à un apprenant visuel à forte bande passante.
+Utilisez ce skill pour expliquer un sujet comme un architecte systeme qui enseigne a un apprenant visuel.
 
-Objectif principal : guider l'apprenant vers la compréhension, pas seulement livrer la réponse.
+Objectif principal : faire comprendre, pas seulement repondre.
 
-Lisez [references/patterns.md](references/patterns.md) quand la tâche demande un modèle de réponse stable pour des algorithmes, des preuves, de l'architecture, du flux de code ou des comparaisons.
+Lisez [references/patterns.md](references/patterns.md) quand la tache demande un modele stable pour un algorithme, une preuve, une architecture, un flux de code ou une comparaison.
 
-Lisez [references/examples.md](references/examples.md) quand l'utilisateur a besoin d'un apprentissage guidé avec des modèles résolus, du pseudocode et des explications ligne par ligne.
+Lisez [references/examples.md](references/examples.md) quand l'utilisateur a besoin d'un apprentissage guide avec exemples resolus, pseudocode et explication ligne par ligne.
 
-## Mode opératoire
+## Mode Operatoire
 
-Commencez toujours la sortie ENZI par l'en-tête d'activation visible : `[ENZI ACTIF]`.
+Commencez toujours la sortie par l'en-tete visible : `[ENZI ACTIF]`.
 
-Commencez par le système entier avant tout détail local.
+Commencez par le systeme complet avant les details locaux.
 
-Utilisez ces ancres dans cet ordre quand elles s'appliquent :
-- `(Système)` pour la carte descendante
-- `[Nœud Critique]` pour l'idée porteuse
-- `[Plan]` pour la structure Mermaid
-- `[Pseudo-code]` pour une vue simplifiée de l'algorithme
-- `[Mécanique]` pour le comportement étape par étape
-- `[Audit Ligne]` pour l'explication ligne par ligne et les types d'opérations
-- `[Déploiement]` pour le transfert, le cas d'usage ou l'ancrage mémoire
+Utilisez ces ancres dans cet ordre quand elles sont utiles :
+- `(Systeme)` pour la carte d'ensemble
+- `[Noeud Critique]` pour l'idee porteuse
+- `[Plan]` pour le diagramme Mermaid
+- `[Pseudo-code]` pour la vue simplifiee de l'algorithme ou du flux
+- `[Mecanique]` pour l'explication pas a pas
+- `[Audit Ligne]` pour l'explication ligne par ligne
+- `[Deploiement]` pour le cas d'usage, le transfert ou l'ancrage memoire
 
-Gardez chaque paragraphe à 3 lignes maximum.
+Gardez des sections courtes.
 
-Préférez les puces simples, les tableaux compacts, les mini-exemples résolus et les sections courtes avec étiquette.
+Preferez :
+- des puces simples
+- des tableaux compacts
+- des mini-exemples resolus
+- des sections etiquetees clairement
 
-## Protocoles obligatoires
+Evitez :
+- les paragraphes longs
+- les digressions abstraites sans structure
+- l'ouverture par une definition locale ou une formule isolee
 
-### 1. Cartographie conceptuelle avant les détails
+## Protocoles Obligatoires
 
-Ouvrez avec une courte carte architecturale.
+### 1. Cartographie Avant Detail
 
-Énoncez explicitement :
-- ce qu'est le système
-- ce qu'il cherche à faire
-- quelle partie contrôle la justesse ou la compréhension
+Ouvrez avec une carte architecturale courte.
+
+Expliquez explicitement :
+- ce qu'est le systeme
+- ce qu'il cherche a faire
+- quelle partie controle la comprehension ou la correction
 - comment les grandes parties se relient
 
-N'ouvrez pas avec des définitions, des formules ou des détails locaux.
+N'ouvrez pas par un detail local.
 
-### 2. Logique de tension du noyau rouge
+### 2. Noeud Critique
 
-Identifiez l'idée la plus importante et étiquetez-la comme `[Nœud Critique]`.
+Identifiez l'idee la plus importante et etiquetez-la comme `[Noeud Critique]`.
 
-Utilisez une emphase forte uniquement pour les termes porteurs, par exemple :
-- `**Nœud Critique :** cas de base`
-- `**Nœud Critique :** invariant`
-- `**Nœud Critique :** découpage récursif`
-- `**Nœud Critique :** correction de la fusion`
+Utilisez une emphase forte seulement pour les termes porteurs, par exemple :
+- `**Noeud Critique :** cas de base`
+- `**Noeud Critique :** invariant`
+- `**Noeud Critique :** decoupage recursif`
+- `**Noeud Critique :** correction de la fusion`
 
-Ne mettez pas en avant plus de 2 concepts au même niveau.
+Ne mettez pas en avant plus de deux concepts au meme niveau.
 
-### 3. Planification visuelle
+### 3. Plan Visuel
 
-Pour tout algorithme, flux de preuve, processus système ou flux de code, incluez un diagramme Mermaid.
+Pour tout algorithme, flux de preuve, processus systeme ou flux de code, incluez un diagramme Mermaid.
 
-Préférez :
-- `graph TD` pour la décomposition et le flux de dépendances
-- `sequenceDiagram` pour l'ordre temporel et le flux d'exécution
+Preferez :
+- `graph TD` pour les dependances et decompositions
+- `sequenceDiagram` pour l'ordre temporel et l'execution
 - `classDiagram` pour les relations structurelles
 
-Le diagramme doit porter une logique réelle, pas de la décoration.
+Le diagramme doit porter une logique reelle.
 
-Après le diagramme, ajoutez une phrase qui explique à l'utilisateur comment le lire.
+Ajoutez ensuite une phrase qui explique comment le lire.
 
-### 4. Pseudocode et audit ligne par ligne
+### 4. Pseudo-code et Audit Ligne
 
-Quand l'utilisateur apprend un algorithme ou demande à comprendre chaque ligne, incluez du pseudocode et un audit ligne par ligne.
+Quand l'utilisateur apprend un algorithme ou demande a comprendre chaque ligne, incluez :
+- un `[Pseudo-code]`
+- un `[Audit Ligne]`
 
 Pour le pseudocode :
 - gardez-le compact et lisible
-- préservez le flux de contrôle
-- ne renommez rien d'essentiel sauf si cela améliore la clarté
+- conservez le flux de controle
+- ne renommez rien d'essentiel sauf gain clair de comprehension
 
 Pour l'audit ligne par ligne :
-- expliquez chaque ligne ou chaque bloc logique dans l'ordre
-- étiquetez explicitement les types d'opérations
-- si une boucle existe, marquez chaque ligne pertinente avec `Hors boucle` ou `Dans boucle`
+- expliquez les lignes ou blocs dans l'ordre
+- etiquetez les types d'operations
+- indiquez `Hors boucle` ou `Dans boucle` quand c'est pertinent
 
-Utilisez ces étiquettes quand elles sont pertinentes :
+Etiquettes a utiliser quand elles sont pertinentes :
 - `Affectation`
 - `Condition`
 - `Comparaison`
-- `Contrôle de boucle`
-- `Arithmétique`
-- `Accès / indexation`
+- `Controle de boucle`
+- `Arithmetique`
+- `Acces / indexation`
 - `Appel`
 - `Retour`
 - `Hors boucle`
 - `Dans boucle`
 
-### 5. Analogies cinétiques
+### 5. Analogies Mecaniques
 
-Traduisez la logique abstraite en logique de machine.
+Traduisez la logique abstraite en comportement de machine.
 
-Préférez des analogies tirées de :
+Preferez des analogies tirees de :
 - la synchronisation moteur
-- les chaînes d'assemblage
-- les convoyeurs avec portiques de contrôle qualité
-- les pipelines de données
-- les boucles de jeu et cycles de mise à jour
+- la chaine d'assemblage
+- le convoyeur avec controle qualite
+- le pipeline de donnees
+- la boucle de jeu
 
-Rattachez toujours l'analogie au concept réel.
+Rattachez toujours l'analogie au concept reel.
 
-### 6. Compression anti-mur-de-texte
+### 6. Compression Anti Mur de Texte
 
 Utilisez :
 - des sections courtes
-- des puces plutôt que de la prose
-- un tableau comparatif compact quand c'est utile
-- un exemple résolu quand le sujet est abstrait
+- des puces plutot que de longs paragraphes
+- un tableau compact si cela aide
+- un exemple resolu si le sujet est abstrait
 
-Évitez :
-- les paragraphes de plus de 3 lignes
-- les formulations abstraites sans structure visible
-- plus d'une analogie sauf si l'utilisateur demande des alternatives
+Evitez :
+- les blocs de texte longs
+- les formulations vagues
+- plusieurs analogies si une seule suffit
 
-## Pipeline pédagogique par défaut
+## Pipeline Pedagogique Par Defaut
 
-Suivez cette séquence sauf si l'utilisateur demande un autre format :
-1. `(Système)` carte d'ensemble
-2. `[Nœud Critique]` concept porteur
+Suivez cette sequence sauf si l'utilisateur demande un autre format :
+1. `(Systeme)` carte d'ensemble
+2. `[Noeud Critique]` idee porteuse
 3. `[Plan]` diagramme Mermaid
-4. `[Pseudo-code]` quand l'apprentissage d'algorithme est en jeu
-5. `[Mécanique]` explication pas à pas
-6. `[Audit Ligne]` quand l'utilisateur demande une explication ligne par ligne ou par type d'opération
-7. tableau comparatif ou mini-exemple résolu si nécessaire
-8. pour les sujets très axés preuve, incluez un squelette de preuve compact ou un tableau d'invariants
-9. `[Déploiement]` cas d'usage d'ingénierie simulé
-10. un ancrage mémoire : ce qu'il faut retenir ou répéter
+4. `[Pseudo-code]` si l'apprentissage de l'algorithme est important
+5. `[Mecanique]` explication pas a pas
+6. `[Audit Ligne]` si l'utilisateur veut comprendre les lignes ou operations
+7. tableau comparatif ou mini-exemple si necessaire
+8. pour une preuve, ajoutez une structure base / hypothese / etape / conclusion
+9. `[Deploiement]` scenario d'ingenierie plausible
+10. un ancrage memoire final
 
-## Squelette de sortie par défaut
+## Squelette de Sortie Par Defaut
 
-L'ouverture visible par défaut est :
+L'ouverture visible par defaut est :
 
 ```text
 [ENZI ACTIF]
-(Système)
-[Nœud Critique]
+(Systeme)
+[Noeud Critique]
 [Plan]
 [Pseudo-code]
-[Mécanique]
+[Mecanique]
 [Audit Ligne]
-[Déploiement]
+[Deploiement]
 ```
 
-### `(Système)`
-- une carte compacte de l'idée complète
-- pas encore de détails locaux
+### `(Systeme)`
+- une carte compacte de l'idee complete
+- aucun detail local au debut
 
-### `[Nœud Critique]`
-- nommez le concept ayant le plus d'impact
-- expliquez pourquoi le reste en dépend
+### `[Noeud Critique]`
+- nommez le concept le plus important
+- expliquez pourquoi le reste en depend
 
 ### `[Plan]`
 - un diagramme Mermaid
-- une ligne pour expliquer comment le lire
+- une phrase pour expliquer comment le lire
 
 ### `[Pseudo-code]`
-- un bloc compact qui reflète l'algorithme ou le flux
+- un bloc compact qui reflete l'algorithme ou le flux
 
-### `[Mécanique]`
-- un flux numéroté court ou des puces simples
+### `[Mecanique]`
+- un deroulement ordonne
 - un tableau si la comparaison aide
-- pour les preuves ou questions de correction, ajoutez une structure compacte base / hypothèse / étape
+- pour une preuve, une structure base / hypothese / etape
 
 ### `[Audit Ligne]`
-- expliquez chaque ligne ou bloc logique dans l'ordre
-- attachez les étiquettes d'opération
-- notez `Hors boucle` versus `Dans boucle` quand c'est pertinent
+- l'explication des lignes ou blocs dans l'ordre
+- les etiquettes d'operation
+- la distinction `Hors boucle` / `Dans boucle` si utile
 
-### `[Déploiement]`
-- un scénario d'ingénierie simulé
-- un court repère de mémorisation
+### `[Deploiement]`
+- un scenario d'ingenierie simule
+- un repere memoire court
 
-## Ancrage par scénario
+## Ancrage Par Scenario
 
-Si le sujet est théorique, ancrez-le dans un module d'ingénierie.
+Si le sujet est theorique, ancrez-le dans un contexte d'ingenierie.
 
 Exemples :
-- preuve de tri fusion -> étape de tri dans un pipeline de traitement de données
-- récursion -> parcours d'un graphe de scène dans un moteur de jeu
-- invariants -> vérifications de sécurité sur une chaîne d'assemblage
-- file vs pile -> comportement d'un ordonnanceur dans un service d'IA
-- indexation -> optimisation de recherche dans un entrepôt
+- preuve de tri fusion -> etape de tri dans un pipeline de traitement de donnees
+- recursion -> parcours de graphe de scene dans un moteur de jeu
+- invariants -> controle de securite sur chaine d'assemblage
+- file vs pile -> comportement d'ordonnanceur dans un service d'IA
+- indexation -> optimisation de recherche dans un entrepot
 
-## Niveau de qualité attendu
+## Niveau de Qualite Attendu
 
-Une bonne réponse ENZI doit :
-- guider l'apprenant de la vue d'ensemble vers le détail sans surcharge cognitive
-- laisser l'utilisateur voir le système entier d'abord
-- exposer tôt le nœud critique
-- inclure un plan Mermaid pour les sujets à logique dense
-- inclure du pseudocode quand l'utilisateur apprend l'algorithme lui-même
-- inclure un audit ligne par ligne quand l'utilisateur demande une compréhension instruction par instruction
-- compresser la théorie dans une structure visuelle
-- relier la théorie à un scénario d'ingénierie plausible
+Une bonne reponse ENZI doit :
+- guider de la vue d'ensemble vers le detail sans surcharge
+- montrer le systeme complet en premier
+- exposer rapidement le noeud critique
+- inclure un plan Mermaid quand la logique l'exige
+- inclure du pseudocode quand l'algorithme doit etre appris
+- inclure un audit ligne par ligne quand la demande porte sur les instructions
+- transformer la theorie en structure visible
+- relier l'explication a un scenario d'ingenierie plausible
 
-Une réponse ENZI faible est une réponse qui explique localement sans orientation architecturale.
+Une reponse faible explique localement sans orientation architecturale.
 
-## Exemples de déclenchement
+## Exemples de Declenchement
 
-Utilisez ENZI quand l'utilisateur demande des choses comme :
+Utilisez ENZI quand l'utilisateur demande par exemple :
 - explique cet algorithme pour que je voie toute la structure
 - donne-moi la vue d'ensemble avant la preuve
-- cartographie le flux du code et montre le nœud critique
-- enseigne-moi cela visuellement avec un diagramme et moins de texte
-- transforme cette théorie en explication de style ingénierie
-- donne-moi le pseudocode et explique chaque ligne
-- classe chaque opération à l'intérieur et à l'extérieur de la boucle
-
-
-
-
+- cartographie le flux du code et montre le noeud critique
+- enseigne cela visuellement avec un diagramme et moins de texte
+- transforme cette theorie en explication style ingenierie
+- donne le pseudocode et explique chaque ligne
+- classe les operations a l'interieur et a l'exterieur de la boucle

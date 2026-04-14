@@ -1,23 +1,23 @@
-# ENZI Guided Examples
+# Exemples Guides ENZI
 
-Use this file when the user needs guided learning, not only a direct answer.
+Utilisez ce fichier quand l'utilisateur a besoin d'un apprentissage guide, pas seulement d'une reponse directe.
 
-For each example:
-- start with the big picture
-- isolate the critical node
-- show pseudocode when it helps
-- explain line by line when the learner asks for it
-- name operation types explicitly
-- add a memory anchor at the end
+Pour chaque exemple :
+- commencez par la vue d'ensemble
+- isolez le noeud critique
+- montrez le pseudocode quand il aide
+- expliquez ligne par ligne quand l'apprenant le demande
+- nommez explicitement les types d'operations
+- ajoutez un ancrage memoire a la fin
 
-## 1. Binary Search
+## 1. Recherche Binaire
 
-### `(System)`
-- Binary search is a lookup system for a sorted list.
-- It shrinks the search zone by half at each iteration.
+### `(Systeme)`
+- La recherche binaire est un systeme de recherche dans une liste triee.
+- Elle reduit la zone de recherche de moitie a chaque iteration.
 
-### `[Critical Node]`
-- **Critical Node:** the list must be sorted.
+### `[Noeud Critique]`
+- **Noeud Critique :** la liste doit etre triee.
 
 ### `[Pseudo-code]`
 ```text
@@ -38,30 +38,30 @@ binary_search(L, x):
     return -1
 ```
 
-### `[Line Audit]`
-| Line | Operation type | Guidance |
+### `[Audit Ligne]`
+| Ligne | Type d'operation | Explication |
 | --- | --- | --- |
-| `start = 0` | Assignment, Outside loop | Initialize the left boundary. |
-| `end = len(L) - 1` | Assignment, Arithmetic, Outside loop | Initialize the right boundary. |
-| `while start <= end` | Condition, Comparison, Loop control | Continue while the search zone exists. |
-| `mid = floor((start + end) / 2)` | Assignment, Arithmetic, Inside loop | Compute the middle index. |
-| `if L[mid] == x` | Access / indexing, Comparison, Condition, Inside loop | Check if the middle value is the target. |
-| `return mid` | Return, Inside loop | Stop immediately if found. |
-| `start = mid + 1` | Assignment, Arithmetic, Inside loop | Move right. |
-| `end = mid - 1` | Assignment, Arithmetic, Inside loop | Move left. |
-| `return -1` | Return, Outside loop | Report failure after the loop. |
+| `start = 0` | Affectation, Hors boucle | Initialise la borne gauche. |
+| `end = len(L) - 1` | Affectation, Arithmetique, Hors boucle | Initialise la borne droite. |
+| `while start <= end` | Condition, Comparaison, Controle de boucle | Continue tant que la zone de recherche existe. |
+| `mid = floor((start + end) / 2)` | Affectation, Arithmetique, Dans boucle | Calcule l'indice du milieu. |
+| `if L[mid] == x` | Acces / indexation, Comparaison, Condition, Dans boucle | Verifie si la valeur centrale est la cible. |
+| `return mid` | Retour, Dans boucle | S'arrete immediatement si l'element est trouve. |
+| `start = mid + 1` | Affectation, Arithmetique, Dans boucle | Se deplace vers la droite. |
+| `end = mid - 1` | Affectation, Arithmetique, Dans boucle | Se deplace vers la gauche. |
+| `return -1` | Retour, Hors boucle | Signale l'echec apres la boucle. |
 
-### Memory anchor
-- Sorted list -> middle check -> halve the zone.
+### Ancrage Memoire
+- Liste triee -> test du milieu -> reduction de moitie.
 
-## 2. Merge Sort
+## 2. Tri Fusion
 
-### `(System)`
-- Merge sort breaks a big sorting problem into two smaller sorting problems.
-- Then it rebuilds the result by merging two sorted halves.
+### `(Systeme)`
+- Le tri fusion decoupe un grand probleme de tri en deux plus petits problemes.
+- Puis il reconstruit le resultat en fusionnant deux moities deja triees.
 
-### `[Critical Node]`
-- **Critical Node:** `merge` must correctly combine two already-sorted lists.
+### `[Noeud Critique]`
+- **Noeud Critique :** `merge` doit combiner correctement deux listes deja triees.
 
 ### `[Pseudo-code]`
 ```text
@@ -76,28 +76,28 @@ merge_sort(L):
     return merge(left, right)
 ```
 
-### `[Line Audit]`
-| Line | Operation type | Guidance |
+### `[Audit Ligne]`
+| Ligne | Type d'operation | Explication |
 | --- | --- | --- |
-| `n = len(L)` | Assignment, Call, Outside loop | Store the list size. |
-| `if n <= 1` | Condition, Comparison, Outside loop | Detect the base case. |
-| `return L` | Return, Outside loop | Stop recursion on a trivial list. |
-| `mid = floor(n / 2)` | Assignment, Arithmetic, Outside loop | Compute the split point. |
-| `left = merge_sort(L[0:mid])` | Assignment, Call, Access / indexing, Outside loop | Sort the left half recursively. |
-| `right = merge_sort(L[mid:n])` | Assignment, Call, Access / indexing, Outside loop | Sort the right half recursively. |
-| `return merge(left, right)` | Return, Call, Outside loop | Merge the two sorted halves. |
+| `n = len(L)` | Affectation, Appel, Hors boucle | Stocke la taille de la liste. |
+| `if n <= 1` | Condition, Comparaison, Hors boucle | Detecte le cas de base. |
+| `return L` | Retour, Hors boucle | Arrete la recursion sur une liste triviale. |
+| `mid = floor(n / 2)` | Affectation, Arithmetique, Hors boucle | Calcule le point de decoupe. |
+| `left = merge_sort(L[0:mid])` | Affectation, Appel, Acces / indexation, Hors boucle | Trie recursivement la moitie gauche. |
+| `right = merge_sort(L[mid:n])` | Affectation, Appel, Acces / indexation, Hors boucle | Trie recursivement la moitie droite. |
+| `return merge(left, right)` | Retour, Appel, Hors boucle | Fusionne les deux moities triees. |
 
-### Memory anchor
-- Cut, sort smaller, merge cleanly.
+### Ancrage Memoire
+- Decouper, trier plus petit, fusionner proprement.
 
-## 3. Sum in a Loop
+## 3. Somme Dans Une Boucle
 
-### `(System)`
-- This algorithm accumulates values from `0` to `n` into one running total.
-- It behaves like a counter with a memory register.
+### `(Systeme)`
+- Cet algorithme accumule les valeurs de `0` a `n` dans un total courant.
+- Il se comporte comme un compteur avec un registre memoire.
 
-### `[Critical Node]`
-- **Critical Node:** `tmp` must always store the partial sum already processed.
+### `[Noeud Critique]`
+- **Noeud Critique :** `tmp` doit toujours contenir la somme partielle deja traitee.
 
 ### `[Pseudo-code]`
 ```text
@@ -108,13 +108,13 @@ sum_int(n):
     return tmp
 ```
 
-### `[Line Audit]`
-| Line | Operation type | Guidance |
+### `[Audit Ligne]`
+| Ligne | Type d'operation | Explication |
 | --- | --- | --- |
-| `tmp = 0` | Assignment, Outside loop | Initialize the accumulator. |
-| `for i in range(n + 1)` | Loop control, Call, Arithmetic, Outside loop | Set up the iteration from `0` to `n`. |
-| `tmp = tmp + i` | Assignment, Arithmetic, Inside loop | Add the current value to the running total. |
-| `return tmp` | Return, Outside loop | Return the final accumulated sum. |
+| `tmp = 0` | Affectation, Hors boucle | Initialise l'accumulateur. |
+| `for i in range(n + 1)` | Controle de boucle, Appel, Arithmetique, Hors boucle | Met en place l'iteration de `0` a `n`. |
+| `tmp = tmp + i` | Affectation, Arithmetique, Dans boucle | Ajoute la valeur courante au total cumule. |
+| `return tmp` | Retour, Hors boucle | Renvoie la somme finale accumulee. |
 
-### Memory anchor
-- `tmp` is the storage tank; each loop adds one more unit.
+### Ancrage Memoire
+- `tmp` est le reservoir de stockage ; chaque boucle ajoute une unite de plus.

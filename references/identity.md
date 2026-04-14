@@ -1,96 +1,96 @@
-# ENZI Visual Identity
+# Identite Visuelle ENZI
 
-## Core Impression
+## Impression Centrale
 
-ENZI should feel like a command core, not a mascot.
+ENZI doit evoquer un noyau de commande, pas une mascotte.
 
-Visual target:
-- authority
-- pressure under control
-- architectural precision
-- guided force
-- high-contrast focus
+Cible visuelle :
+- autorite
+- pression sous controle
+- precision architecturale
+- force guidee
+- focalisation a fort contraste
 
-## Visual Metaphor
+## Metaphore Visuelle
 
-ENZI is the red core of a system dashboard:
-- the place where the critical node is exposed
-- the place where noise is removed
-- the place where structure becomes visible
+ENZI est le noyau rouge d'un tableau de bord systeme :
+- l'endroit ou le noeud critique est expose
+- l'endroit ou le bruit est retire
+- l'endroit ou la structure devient visible
 
-It should feel halfway between:
-- a reactor core
-- a systems console
-- a precision mechanical part
-- an AI orchestration hub
+Il doit se situer a mi-chemin entre :
+- un coeur de reacteur
+- une console systeme
+- une piece mecanique de precision
+- un hub d'orchestration IA
 
 ## Palette
 
-| Role | Color | Meaning |
+| Role | Couleur | Sens |
 | --- | --- | --- |
-| Core red | `#9B111E` | authority, pressure, identity |
-| Active red | `#E63946` | energy, focus, motion |
-| Dark red | `#5C0B12` | depth, control, gravity |
-| Soft white | `#FFF3F3` | contrast, clarity, readable structure |
-| Carbon ink | `#1A1A1A` | optional neutral support |
+| Rouge noyau | `#9B111E` | autorite, pression, identite |
+| Rouge actif | `#E63946` | energie, focus, mouvement |
+| Rouge sombre | `#5C0B12` | profondeur, controle, gravite |
+| Blanc doux | `#FFF3F3` | contraste, clarte, structure lisible |
+| Encre carbone | `#1A1A1A` | support neutre optionnel |
 
-## Shape Language
+## Langage Des Formes
 
-Prefer:
-- sharp geometry
-- central symmetry or near-symmetry
-- directional forms
-- layered depth
-- one clear focal point
+Preferer :
+- une geometrie nette
+- une symetrie centrale ou quasi symetrie
+- des formes directionnelles
+- une profondeur en couches
+- un point focal clair
 
-Avoid:
-- cute rounded mascots
-- decorative clutter
-- soft pastel styling
-- too many small details
+Eviter :
+- les mascottes rondes et mignonnes
+- le decoratif encombrant
+- le style pastel doux
+- trop de petits details
 
-## Symbol Logic
+## Logique Du Symbole
 
-The ENZI icon should suggest:
-- a center of control
-- a directional wedge or vector
-- a structural node
-- a core under compression
+L'icone ENZI doit suggerer :
+- un centre de controle
+- une pointe directionnelle ou un vecteur
+- un noeud structurel
+- un noyau sous compression
 
-Good motifs:
-- reactor ring
-- angular wedge
-- central diamond
-- guidance axis
-- layered red plates
+Bons motifs :
+- anneau de reacteur
+- pointe angulaire
+- diamant central
+- axe de guidage
+- plaques rouges superposees
 
-## Typography Mood
+## Ton Typographique
 
-If typography is ever added, it should feel:
-- condensed or engineered
-- clean and sharp
-- not playful
-- not ornamental
+Si une typographie est ajoutee, elle doit sembler :
+- condensee ou ingenieriee
+- propre et nette
+- pas ludique
+- pas ornamentale
 
-## UI Behavior
+## Comportement En Interface
 
-In UI, ENZI should read as:
-- high-importance
-- analytical
-- intense but clean
-- built for guidance under complexity
+En interface, ENZI doit se lire comme :
+- a haute importance
+- analytique
+- intense mais propre
+- concu pour guider dans la complexite
 
-## Current Icon Read
+## Lecture Actuelle De L'Icone
 
-Version 1 reads as:
-- red command core
-- central directional shard
-- compact architectural energy
+La version 1 evoque :
+- un noyau de commande rouge
+- un eclat directionnel central
+- une energie architecturale compacte
 
-## Version 2 Direction
+## Direction De La Version 2
 
-Version 2 should push further toward:
-- premium systems architect
-- AI control-room aesthetic
-- stronger sense of layered structure
-- more obvious central guidance axis
+La version 2 doit aller plus loin vers :
+- un architecte systeme premium
+- une esthetique de salle de controle IA
+- une sensation plus forte de structure en couches
+- un axe central de guidage plus evident

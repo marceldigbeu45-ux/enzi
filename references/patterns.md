@@ -1,127 +1,156 @@
-# ENZI Patterns
+# Modeles ENZI
 
-Use this file when ENZI needs a stable response pattern for a recurring explanation type.
+Utilisez ce fichier quand ENZI a besoin d'un modele de reponse stable pour un type d'explication recurrent.
 
-Pick the smallest matching pattern. Do not combine all patterns unless the user explicitly wants a full teaching pack.
+Choisissez le plus petit modele adapte. Ne combinez pas tous les modeles sauf si l'utilisateur demande explicitement un pack pedagogique complet.
 
-## 1. Algorithm Pattern
+## 1. Modele Algorithme
 
-Use for sorting, graph traversal, dynamic programming, recursion, search, or pipeline logic.
+A utiliser pour :
+- tri
+- parcours de graphe
+- programmation dynamique
+- recursion
+- recherche
+- logique de pipeline
 
-Output shape:
-- `(System)` what the algorithm is doing globally
-- `[Critical Node]` the correctness bottleneck
-- `[Blueprint]` a `graph TD` or `sequenceDiagram`
-- `[Pseudo-code]` a compact pseudocode block when the user is learning the algorithm
-- `[Mechanics]` the ordered steps
-- `[Line Audit]` line-by-line explanation with operation type labels when the user asks to understand each line
-- `[Deployment]` one engineering analogy and one memory cue
+Forme de sortie :
+- `(Systeme)` ce que fait l'algorithme globalement
+- `[Noeud Critique]` le goulot de correction
+- `[Plan]` un `graph TD` ou `sequenceDiagram`
+- `[Pseudo-code]` un bloc compact si l'utilisateur apprend l'algorithme
+- `[Mecanique]` les etapes ordonnees
+- `[Audit Ligne]` l'explication ligne par ligne si l'utilisateur veut comprendre les instructions
+- `[Deploiement]` une analogie d'ingenierie et un repere memoire
 
-Questions to answer:
-- what enters the algorithm
-- what transformation happens
-- where correctness can fail
-- what the base case or stopping condition is
-- which lines are outside loops, inside loops, assignments, conditions, comparisons, or returns
+Questions auxquelles repondre :
+- qu'est-ce qui entre dans l'algorithme
+- quelle transformation a lieu
+- ou la correction peut echouer
+- quel est le cas de base ou la condition d'arret
+- quelles lignes sont hors boucle, dans boucle, des affectations, des conditions, des comparaisons ou des retours
 
-Operation labels to use when relevant:`r`n- `Assignment`
+Etiquettes d'operation a utiliser quand elles sont pertinentes :
+- `Affectation`
 - `Condition`
-- `Comparison`
-- `Loop control`
-- `Arithmetic`
-- `Access / indexing`
-- `Call`
-- `Return`
-- `Outside loop`
-- `Inside loop`
+- `Comparaison`
+- `Controle de boucle`
+- `Arithmetique`
+- `Acces / indexation`
+- `Appel`
+- `Retour`
+- `Hors boucle`
+- `Dans boucle`
 
-Compact line-audit table:
-| Line | Role | Operation type | Explanation |
+Tableau compact d'audit ligne par ligne :
+
+| Ligne | Role | Type d'operation | Explication |
 | --- | --- | --- | --- |
-| 1 | Initialize | Assignment, Outside loop | Store the starting value |
-| 2 | Test | Condition, Comparison | Decide whether to continue |
-| 3 | Update | Assignment, Arithmetic, Inside loop | Advance the state |
+| 1 | Initialiser | Affectation, Hors boucle | Stocke la valeur de depart |
+| 2 | Tester | Condition, Comparaison | Decide s'il faut continuer |
+| 3 | Mettre a jour | Affectation, Arithmetique, Dans boucle | Fait avancer l'etat |
 
-## 2. Proof Pattern
+## 2. Modele Preuve
 
-Use for correctness, recurrence, invariants, induction, or termination arguments.
+A utiliser pour :
+- correction
+- recurrence
+- invariants
+- induction
+- terminaison
 
-Output shape:
-- `(System)` theorem or claim map
-- `[Critical Node]` the load-bearing logical step
-- `[Blueprint]` proof flow as Mermaid
-- `[Mechanics]` base / hypothesis / step / conclusion
-- `[Deployment]` one engineering interpretation of the proof
+Forme de sortie :
+- `(Systeme)` carte du theoreme ou de l'assertion
+- `[Noeud Critique]` l'etape logique porteuse
+- `[Plan]` flux de preuve en Mermaid
+- `[Mecanique]` base / hypothese / etape / conclusion
+- `[Deploiement]` une interpretation d'ingenierie
 
-Compact proof skeleton:
-| Block | Purpose |
+Squelette compact de preuve :
+
+| Bloc | Role |
 | --- | --- |
-| Base | Show the property starts correctly |
-| Hypothesis | Assume it holds on smaller or earlier cases |
-| Step | Show the assumption forces the next case |
-| Conclusion | Close the recurrence or invariant loop |
+| Base | Montrer que la propriete demarre correctement |
+| Hypothese | Supposer qu'elle tient sur les cas plus petits ou anterieurs |
+| Etape | Montrer que l'hypothese impose le cas suivant |
+| Conclusion | Fermer la boucle de recurrence ou d'invariant |
 
-## 3. Architecture Pattern
+## 3. Modele Architecture
 
-Use for software systems, APIs, services, modules, data movement, and component relationships.
+A utiliser pour :
+- systemes logiciels
+- API
+- services
+- modules
+- flux de donnees
+- relations entre composants
 
-Output shape:
-- `(System)` architecture map
-- `[Critical Node]` control boundary or dependency bottleneck
-- `[Blueprint]` `graph TD` or `classDiagram`
-- `[Mechanics]` request or data flow
-- `[Deployment]` operational implication or scaling note
+Forme de sortie :
+- `(Systeme)` carte d'architecture
+- `[Noeud Critique]` frontiere de controle ou goulot de dependance
+- `[Plan]` `graph TD` ou `classDiagram`
+- `[Mecanique]` flux de requete ou de donnees
+- `[Deploiement]` implication operationnelle ou note de passage a l'echelle
 
-Questions to answer:
-- who talks to whom
-- what each block owns
-- where state lives
-- where failure propagates
+Questions auxquelles repondre :
+- qui parle a qui
+- ce que possede chaque bloc
+- ou vit l'etat
+- ou la panne se propage
 
-## 4. Code Flow Pattern
+## 4. Modele Flux de Code
 
-Use for functions, methods, program flow, and execution order.
+A utiliser pour :
+- fonctions
+- methodes
+- flux de programme
+- ordre d'execution
 
-Output shape:
-- `(System)` purpose of the code path
-- `[Critical Node]` branch, invariant, or side effect to watch
-- `[Blueprint]` `sequenceDiagram` or `graph TD`
-- `[Pseudo-code]` simplified control flow when helpful
-- `[Mechanics]` ordered control flow
-- `[Line Audit]` line-by-line explanation when the user wants to understand each instruction
-- `[Deployment]` debugging or maintenance angle
+Forme de sortie :
+- `(Systeme)` objectif du chemin de code
+- `[Noeud Critique]` branche, invariant ou effet de bord a surveiller
+- `[Plan]` `sequenceDiagram` ou `graph TD`
+- `[Pseudo-code]` flux de controle simplifie quand cela aide
+- `[Mecanique]` flux de controle ordonne
+- `[Audit Ligne]` explication ligne par ligne si l'utilisateur veut comprendre chaque instruction
+- `[Deploiement]` angle debogage ou maintenance
 
-Questions to answer:
-- what starts the flow
-- what branches exist
-- what mutates state
-- what ends the flow
+Questions auxquelles repondre :
+- qu'est-ce qui demarre le flux
+- quelles branches existent
+- ce qui modifie l'etat
+- ce qui met fin au flux
 
-## 5. Comparison Pattern
+## 5. Modele Comparaison
 
-Use for queue vs stack, BFS vs DFS, SQL vs NoSQL, recursion vs iteration, and similar pairs.
+A utiliser pour :
+- file vs pile
+- BFS vs DFS
+- SQL vs NoSQL
+- recursion vs iteration
+- autres paires similaires
 
-Output shape:
-- `(System)` same problem, two strategies
-- `[Critical Node]` the real decision criterion
-- `[Blueprint]` one compact diagram if useful
-- `[Mechanics]` one comparison table
-- `[Deployment]` one scenario for choosing each option
+Forme de sortie :
+- `(Systeme)` meme probleme, deux strategies
+- `[Noeud Critique]` le vrai critere de decision
+- `[Plan]` un diagramme compact si utile
+- `[Mecanique]` un tableau comparatif
+- `[Deploiement]` un scenario de choix pour chaque option
 
-Compact comparison table:
-| Option | Strength | Weakness | Best fit |
+Tableau comparatif compact :
+
+| Option | Force | Faiblesse | Meilleur usage |
 | --- | --- | --- | --- |
 | A | ... | ... | ... |
 | B | ... | ... | ... |
 
-## Pattern Selection Rule
+## Regle de Selection
 
-If the user asks:
-- "explain how it works" -> start with Algorithm or Code Flow
-- "prove that it is correct" -> use Proof
-- "show me the system" -> use Architecture
-- "which one should I choose" -> use Comparison
-- "explain each line" or "give pseudocode" -> add `[Pseudo-code]` and `[Line Audit]`
+Si l'utilisateur demande :
+- "explique comment ca marche" -> commencez par Algorithme ou Flux de code
+- "prouve que c'est correct" -> utilisez Preuve
+- "montre-moi le systeme" -> utilisez Architecture
+- "lequel dois-je choisir" -> utilisez Comparaison
+- "explique chaque ligne" ou "donne le pseudocode" -> ajoutez `[Pseudo-code]` et `[Audit Ligne]`
 
-If the request mixes two modes, use the primary mode first and borrow only one support element from the second.
-
+Si la demande melange deux modes, utilisez d'abord le mode principal puis empruntez seulement un element de support au second.

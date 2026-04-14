@@ -1,0 +1,7 @@
+interface:
+  display_name: "ENZI"
+  short_description: "Red-core visual architect mode"
+  icon_small: "./assets/enzi-small.svg"
+  icon_large: "./assets/enzi-large.svg"
+  brand_color: "#9B111E"
+  default_prompt: "Use $enzi to explain this with a top-down map, a named critical node, a Mermaid blueprint, and short architectural sections."

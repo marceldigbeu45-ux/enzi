@@ -1,7 +1,7 @@
 ---
 name: enzi
-description: Style d'enseignement architectural pour les apprenants visuo-systemiques qui ont besoin de la vue d'ensemble avant les details. A utiliser quand Codex doit expliquer theorie, algorithmes, preuves, flux de code, mathematiques, systemes ou architecture de projet avec une carte descendante, un noeud critique clairement nomme, des diagrammes Mermaid, des analogies mecaniques, du pseudocode et une explication progressive.
----
+description: Style d'enseignement architectural pour les apprenants qui ont besoin de la vue d'ensemble avant les details. A-utiliser quand Codex doit expliquer théorie, algorithmes, preuves, flux de code, mathematiques, systèmes ou architecture de projet avec une carte descendante, un noeud critique clairement nommé, des diagrammes Mermaid, des analogies mécaniques, du pseudo-code et une explication progressive.
+--
 
 # ENZI
 
@@ -15,9 +15,9 @@ Lisez [references/examples.md](references/examples.md) quand l'utilisateur a bes
 
 ## Mode Operatoire
 
-Commencez toujours la sortie par l'en-tete visible : `[ENZI ACTIF]`.
+Commencez toujours la sortie par l'en-tête visible : `[ENZI ACTIF]`.
 
-Commencez par le systeme complet avant les details locaux.
+Commencez par le système complet avant les details locaux.
 
 Utilisez ces ancres dans cet ordre quand elles sont utiles :
 - `(Systeme)` pour la carte d'ensemble
@@ -30,7 +30,7 @@ Utilisez ces ancres dans cet ordre quand elles sont utiles :
 
 Gardez des sections courtes.
 
-Preferez :
+Préférez :
 - des puces simples
 - des tableaux compacts
 - des mini-exemples resolus
@@ -48,10 +48,10 @@ Evitez :
 Ouvrez avec une carte architecturale courte.
 
 Expliquez explicitement :
-- ce qu'est le systeme
-- ce qu'il cherche a faire
-- quelle partie controle la comprehension ou la correction
-- comment les grandes parties se relient
+- Ce qu'est le systeme
+  Cce qu'il cherche a faire
+- Quelle partie controle la comprehension ou la correction
+- Comment les grandes parties se relient
 
 N'ouvrez pas par un detail local.
 
@@ -60,10 +60,10 @@ N'ouvrez pas par un detail local.
 Identifiez l'idee la plus importante et etiquetez-la comme `[Noeud Critique]`.
 
 Utilisez une emphase forte seulement pour les termes porteurs, par exemple :
-- `**Noeud Critique :** cas de base`
-- `**Noeud Critique :** invariant`
-- `**Noeud Critique :** decoupage recursif`
-- `**Noeud Critique :** correction de la fusion`
+- `Noeud Critique :cas de base`
+- `Noeud Critique :invariant`
+- `Noeud Critique : découpage recursif`
+- `Noeud Critique : correction de la fusion`
 
 Ne mettez pas en avant plus de deux concepts au meme niveau.
 
@@ -71,7 +71,7 @@ Ne mettez pas en avant plus de deux concepts au meme niveau.
 
 Pour tout algorithme, flux de preuve, processus systeme ou flux de code, incluez un diagramme Mermaid.
 
-Preferez :
+Préférez :
 - `graph TD` pour les dependances et decompositions
 - `sequenceDiagram` pour l'ordre temporel et l'execution
 - `classDiagram` pour les relations structurelles
@@ -138,17 +138,17 @@ Evitez :
 
 Suivez cette sequence sauf si l'utilisateur demande un autre format :
 1. `(Systeme)` carte d'ensemble
-2. `[Noeud Critique]` idee porteuse
+2. `[Noeud Critique]` idée porteuse
 3. `[Plan]` diagramme Mermaid
 4. `[Pseudo-code]` si l'apprentissage de l'algorithme est important
-5. `[Mecanique]` explication pas a pas
+5. `[Mecanique]` explication pas à pas
 6. `[Audit Ligne]` si l'utilisateur veut comprendre les lignes ou operations
 7. tableau comparatif ou mini-exemple si necessaire
 8. pour une preuve, ajoutez une structure base / hypothese / etape / conclusion
 9. `[Deploiement]` scenario d'ingenierie plausible
 10. un ancrage memoire final
 
-## Squelette de Sortie Par Defaut
+## Sq3uelette de Sortie Par Defaut
 
 L'ouverture visible par defaut est :
 
@@ -194,7 +194,7 @@ L'ouverture visible par defaut est :
 
 ## Ancrage Par Scenario
 
-Si le sujet est theorique, ancrez-le dans un contexte d'ingenierie.
+Si le sujet est théorique, ancrez-le dans un contexte d'ingenierie.
 
 Exemples :
 - preuve de tri fusion -> etape de tri dans un pipeline de traitement de donnees
@@ -203,9 +203,9 @@ Exemples :
 - file vs pile -> comportement d'ordonnanceur dans un service d'IA
 - indexation -> optimisation de recherche dans un entrepot
 
-## Niveau de Qualite Attendu
+## Niveau de Qualité Attendu
 
-Une bonne reponse ENZI doit :
+Une bonne réponse ENZI doit :
 - guider de la vue d'ensemble vers le detail sans surcharge
 - montrer le systeme complet en premier
 - exposer rapidement le noeud critique
@@ -215,9 +215,9 @@ Une bonne reponse ENZI doit :
 - transformer la theorie en structure visible
 - relier l'explication a un scenario d'ingenierie plausible
 
-Une reponse faible explique localement sans orientation architecturale.
+Une réponse faible explique localement sans orientation architecturale.
 
-## Exemples de Declenchement
+## Exemples de Déclenchement
 
 Utilisez ENZI quand l'utilisateur demande par exemple :
 - explique cet algorithme pour que je voie toute la structure
@@ -227,3 +227,4 @@ Utilisez ENZI quand l'utilisateur demande par exemple :
 - transforme cette theorie en explication style ingenierie
 - donne le pseudocode et explique chaque ligne
 - classe les operations a l'interieur et a l'exterieur de la boucle
+2

@@ -5,7 +5,7 @@ Il s'adresse aux utilisateurs qui comprennent mieux quand ils voient :
 - le système entier avant les détails locaux
 - le concept porteur principal très tôt
 - un plan logique avec Mermaid
-- du pseudocode compact et un audit ligne par ligne quand c'est nécessaire
+- du pseudo-code compact et un audit ligne par ligne quand c'est nécessaire
 
 ## Positionnement
 
